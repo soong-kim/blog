@@ -20,8 +20,8 @@ const Grid = ({ numbers, correct, setNumbers }) => {
   }
 
   const tableRows = numbers.map(
-    (row, r) => <div className='game-table-row'>
-      {row.map((elem, c) => <div>
+    (row, r) => <div className='game-table-row' key={r}>
+      {row.map((elem, c) => <div key={c}>
         <button className='game-button' onClick={() => RemoveNumber(r, c)}>{elem}</button>
       </div>)}
     </div>

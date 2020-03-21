@@ -8,7 +8,7 @@ import GameMainView from './games/GameMainView';
 
 function App() {
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <div className="App">
         <Switch>
           <Route path='/games/:name' component={GameMainView} />
